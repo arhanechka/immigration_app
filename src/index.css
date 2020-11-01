@@ -20,3 +20,9 @@ code {
   font-size: 14pt;
   color: #000;
 }
+
+.button{
+  background-color: cornflowerblue;
+  color: #000;
+  font-size: 14pt;
+}

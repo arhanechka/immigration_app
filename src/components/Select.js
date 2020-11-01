@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React from 'react'
 import Select from "react-select";
 import customStyles from '../utils/SelectCustomStyles'
 
@@ -11,15 +11,7 @@ import customStyles from '../utils/SelectCustomStyles'
     </div>
   );
 
-  
-
   const CustomControl = (props) => {
-    const [value, setValue] = useState(0);
-
-    const change = (option)=>{
-      setValue(option)
-      console.log(value.label)
-    }
     return(
       <div>
           <div class = 'block'>{props.label}</div>
@@ -27,7 +19,7 @@ import customStyles from '../utils/SelectCustomStyles'
       defaultValue={props.options[0]}
       formatOptionLabel={formatOptionLabel}
       options={props.options}
-      onChange={change}
+      onChange={props.handleChange}
     />
     </div>
   )};
