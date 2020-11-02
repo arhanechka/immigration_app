@@ -1,5 +1,4 @@
 import './App.css';
-import Preconditions from './components/Preconditions'
 import Conditions from './components/Conditions'
 import Welcome from './components/Welcome'
 import DataCenter from './components/DataCenter'
@@ -14,8 +13,8 @@ function App() {
    <div className="App">
       <header className="App-header">       
         <Route exact path="/" component={Welcome} />    
-        <Route exact path="/prec" component={Preconditions} />            
-        <Route exact path="/cond" component={Conditions} />  
+        <Route exact path="/prec" render={(props) => <Conditions {...props} title={`Preconditions`}/>} />            
+        <Route exact path="/cond" render={(props) => <Conditions {...props} title={`Conditions`}/>} />
         <Route exact path="/result" component={DataCenter} />      
       </header>
     </div>
